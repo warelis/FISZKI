@@ -17,7 +17,7 @@ public class AloneWord {
             joinColumns = @JoinColumn(name = "AloneWord_id"),
             inverseJoinColumns = @JoinColumn(name = "WordSet_id")
     )
-    private Set<WordSet> wordsWithTrans;//W Set nie mamy duplikatów
+    private Set<WordSet> wordsWithTrans;//
     private String plWord;
     private String engWord;
 }

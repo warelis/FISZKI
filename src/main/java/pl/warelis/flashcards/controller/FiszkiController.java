@@ -23,11 +23,10 @@ public class FiszkiController {
 
     @GetMapping("/fiszki/{id}")
     public AloneWord findOneById(@PathVariable Long id){
-        return repository.findById(id).get();//repository daje nam opitonal aloneword i moze on dawac nulla.jak nic nie znajdzie to daje nulla. .get()
-    }//chcemy zwrocic wordie a to chce nam dac optional wordie
+        return repository.findById(id).get();
     @PostMapping("/fiszki")
     public AloneWord save(@RequestBody AloneWord aloneWord){
-        return repository.saveAndFlush(aloneWord);//repository jak chce coś wykonać z bazą danych
+        return repository.saveAndFlush(aloneWord);
     }
     @GetMapping("/test")
     public String inti(){
